@@ -16,6 +16,7 @@ jobs:
           unzip -q KlexClient-source.zip
           rm -rf mdk/src
           cp -r KlexClient/src mdk/src
+          printf '\nsourceCompatibility = targetCompatibility = "1.8"\ncompileJava { sourceCompatibility = targetCompatibility = "1.8" }\n' >> mdk/build.gradle
       - name: Build
         working-directory: mdk
         run: |
